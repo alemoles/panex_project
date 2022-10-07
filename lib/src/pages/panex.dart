@@ -7,38 +7,57 @@ class Panex extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Text("Panex"),
-          Column(
-            children: [
-              // red
-              // orange
-              // yellow
-              // green
-              // blue
-              // purple
-              _Rectangulo(
-                color: red,
-              ),
-              _Rectangulo(
-                color: orange,
-              ),
-              _Rectangulo(
-                color: yellow,
-              ),
-              _Rectangulo(
-                color: green,
-              ),
-              _Rectangulo(
-                color: blue,
-              ),
-              _Rectangulo(
-                color: purple,
-              ),
-            ],
-          ),
-        ],
+      body: Center(
+        child: Stack(
+          children: [
+            Text("Panex"),
+            _Background(),
+            Column(
+              children: [
+                // red
+                // orange
+                // yellow
+                // green
+                // blue
+                // purple
+                _Rectangulo(
+                  color: red,
+                ),
+                _Rectangulo(
+                  color: orange,
+                ),
+                _Rectangulo(
+                  color: yellow,
+                ),
+                _Rectangulo(
+                  color: green,
+                ),
+                _Rectangulo(
+                  color: blue,
+                ),
+                _Rectangulo(
+                  color: purple,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _Background extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 600,
+      height: 600,
+      decoration: BoxDecoration(
+        color: background,
+        borderRadius: BorderRadius.circular(
+          10,
+        ),
       ),
     );
   }
